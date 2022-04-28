@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<!-- Fig 9.6: RollingDice.html-->
+<html>
+
+<head>
+    <meta charset -="utf-8">
+    <title>Rolling Dice Frequencices</title>
+    <style type="text/css">
+        img {
+            margin-right: 10px;
+        }
+        
+        table {
+            width: 200px;
+            border-collapse: collapse;
+            background-color: lightblue;
+        }
+        
+        table,
+        td,
+        th {
+            border: 1px solid black;
+            padding: 4px;
+            margin-top: 20px;
+        }
+        
+        th {
+            text-align: left;
+            color: white;
+            background-color: darkblue;
+        }
+    </style>
+    <script>
+        // Variables
+        var frequency1 = 0;
+        var frequency2 = 0;
+        var frequency3 = 0;
+        var frequency4 = 0;
+        var frequency5 = 0;
+        var frequency6 = 0;
+        var totalDice = 0;
+
+        // register start button event
+        function start() {
+            var button = document.getElementById("rollButton");
+            button.addEventListener("click", rollDice, false);
+        } // End of Start function
+
+        // roll the dice
+        function rollDice() {
+            var face; //rolled dice
+
+            // Loop to roll die 12 times
+            for (var i = 1; i <= 12; ++i) {
+                face = Math.floor(1 + Math.random() * 6);
+                tallyRolls(face); // Increment the frequency counter
+                setImage(i, face); // display the appropiate die image
+                ++totalDice; // increment total
+            } // end of die rolling loop
+        }
+    </script>
+</head>
+
+</html>
