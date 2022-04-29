@@ -49,7 +49,7 @@
 
         // roll the dice
         function rollDice() {
-            var face = document.getElementById("die1"); //rolled dice
+            var face; //rolled dice
 
             // Loop to roll die 12 times
             for (var i = 1; i <= 12; ++i) {
@@ -89,8 +89,6 @@
         // set image source for die
         function setImage(dieNumber, face) {
             var dieImg = document.getElementById("die" + dieNumber);
-            dieImg.setAttribute("src", "die" + face + ".png");
-            dieImg.setAttribute("alt", "die with " + face + " spot(s)");
         } // end function setImage
 
         // Update the frequency table on the page
@@ -127,12 +125,20 @@
 
     <body>
         <p>
-            <img id="die1" src="./Images/die1.png" alt="1 face">
+            <img id="die1" src="./Images/die1.png" alt="die1.png">
             <img id="die2" src="./Images/die2.png" alt="2 face">
             <img id="die3" src="./Images/die3.png" alt="3 face">
             <img id="die4" src="./Images/die4.png" alt="4 face">
             <img id="die5" src="./Images/die5.png" alt="5 face">
             <img id="die6" src="./Images/die6.png" alt="6 face">
+        </p>
+        <p>
+            <img id="die7" src="./Images/blank.png" alt="die7.png">
+            <img id="die3" src="./Images/blank.png" alt="3 face">
+            <img id="die8" src="./Images/blank.png" alt="2 face">
+            <img id="die10" src="./Images/blank.png" alt="4 face">
+            <img id="die11" src="./Images/blank.png" alt="5 face">
+            <img id="die12" src="./Images/blank.png" alt="6 face">
         </p>
         <form action="#">
             <input id="rollButton" type="button" value="Roll Dice">
