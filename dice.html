@@ -92,6 +92,35 @@
             dieImg.setAttribute("src", "die" + face + ".png");
             dieImg.setAttribute("alt", "die with" + face + " spot(s)");
         } // end function setImage
+
+        // Update the frequency table on the page
+        function updateFrequencyTable() {
+            var tableDiv = document.getElementById("frequencyTableDiv");
+
+            tableDiv.innerHTML = "<table>" +
+                "<caption>Die Rolling Frequencies</caption>" +
+                "<thread><th>Face,/th><th>Frequency</th>" +
+                "<th>Percent</th></thread>" +
+                "<tbody><tr><td>1</td><td>" + frequency1 + "</td><td>" +
+                formatPercent(frequency1 / totalDice) + "</td></tr>" +
+                "<tr><td>2</td><td>" + frequency2 + "</td><td>" +
+                formatPercent(frequency2 / totalDice) + "</td></tr>" +
+                "<tr><td>3</td><td>" + frequency3 + "</td><td>" +
+                formatPercent(frequency3 / totalDice) + "</td></tr>" +
+                "<tr><td>4</td><td>" + frequency4 + "</td><td>" +
+                formatPercent(frequency4 / totalDice) + "</td></tr>" +
+                "<tr><td>5</td><td>" + frequency5 + "</td><td>" +
+                formatPercent(frequency5 / totalDice) + "</td></tr>" +
+                "<tr><td>6</td></td>" + frequency6 + "</td><td>" +
+                formatPercent(frequency6 / totalDice) + "</td></tr>" +
+                "</tbody></table>";
+        } // end function UpdateFrequencyTable 
+
+        //format percenrtage 
+        function formatPercent(value) {
+            value *= 100;
+            return value.toFixed(2);
+        } // end function formatPercent
     </script>
 </head>
 
