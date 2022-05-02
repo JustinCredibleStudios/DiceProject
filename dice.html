@@ -87,9 +87,9 @@
         } // end of tallyRolls funnction
 
         // set image source for die
-        function setImage(dieNumber, face) {
-            var dieImg = document.getElementById("die" + dieNumber);
-            dieImg.setAttribute( "src","./Images/die"+face+".png" );
+        function setImage(die, face) {
+            var dieImg = document.getElementById("die" + die);
+            dieImg.setAttribute( "src","./Images/die"+ face +".png" );
             dieImg.setAttribute( "alt", "die with " + face + " spot(s)" );
         } // end function setImage
 
